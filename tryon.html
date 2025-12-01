@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Try-On — Auramorph</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Auramorph logo" class="brand-logo" />
+      <span class="brand-name">Auramorph by Interstellers</span>
+    </a>
+    <nav class="nav">
+      <a href="girls.html" class="nav-link">Girls Products</a>
+      <a href="boys.html" class="nav-link">Boys Products</a>
+      <a href="cart.html" class="nav-link btn-cart">Cart (<span id="cart-count">0</span>)</a>
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Virtual Try-On</h1>
+    <p class="subhead">Upload a photo, meet your avatar, and apply items from your cart to preview your look.</p>
+
+    <div class="tryon-grid">
+      <div class="card tryon-upload">
+        <h3>Upload your photo</h3>
+        <input type="file" id="photo-input" accept="image/*" />
+        <canvas id="avatar-canvas" width="480" height="640" class="avatar-canvas"></canvas>
+        <p class="note">Demo preview: we place your photo and simulate product effects (tint, glow, matte) as overlays.</p>
+      </div>
+
+      <div class="card tryon-apply">
+        <h3>Apply cart items</h3>
+        <label for="blend-select">Blend Mode:</label>
+        <select id="blend-select" class="blend-select">
+          <option value="soft-light">Soft Light</option>
+          <option value="multiply">Multiply</option>
+          <option value="screen">Screen</option>
+          <option value="overlay">Overlay</option>
+        </select>
+
+        <div id="tryon-items" class="tryon-items"></div>
+        <div class="tryon-actions">
+          <button class="btn outline" id="clear-effects">Clear effects</button>
+          <a class="btn primary" href="checkout.html">Satisfied? Checkout</a>
+        </div>
+      </div>
+
+      <!-- ✅ Shade Preview Panel -->
+       
+
+      <div class="card swatch-panel">
+        <h3>Shade Preview</h3>
+        <div class="swatch-group">
+          <h4>Lipstick Shades</h4>
+          <div class="swatches">
+            <div class="swatch" style="background-color: rgba(220,20,60,0.4);" title="Crimson"></div>
+            <div class="swatch" style="background-color: rgba(255,0,0,0.4);" title="Red"></div>
+            <div class="swatch" style="background-color: rgba(128,0,0,0.4);" title="Maroon"></div>
+          </div>
+        </div>
+        <div class="swatch-group">
+          <h4>Foundation Tones</h4>
+          <div class="swatches">
+            <div class="swatch" style="background-color: rgba(255,228,196,0.4);" title="Light Beige"></div>
+            <div class="swatch" style="background-color: rgba(210,180,140,0.4);" title="Medium Tan"></div>
+            <div class="swatch" style="background-color: rgba(160,82,45,0.4);" title="Deep Bronze"></div>
+          </div>
+        </div>
+      </div>
+      <div class="swatch-group">
+  <h4>Beard Oil Shine</h4>
+  <div class="swatches">
+    <div class="swatch" style="background-color:rgba(139,69,19,0.3);" title="Light Shine"></div>
+    <div class="swatch" style="background-color:rgba(101,67,33,0.3);" title="Medium Shine"></div>
+    <div class="swatch" style="background-color:rgba(54,33,20,0.3);" title="Deep Shine"></div>
+  </div>
+</div>
+<div class="card quiz">
+  <h3>Skin Type Quiz</h3>
+  <button onclick="suggestProduct('dry')">Dry Skin</button>
+  <button onclick="suggestProduct('oily')">Oily Skin</button>
+  <button onclick="suggestProduct('combo')">Combination</button>
+  <p id="quiz-result"></p>
+</div>
+
+      <!-- ✅ End Shade Preview Panel -->
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Auramorph by Interstellers.</p>
+  </footer>
+</body>
+</html>

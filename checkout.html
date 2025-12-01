@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout — Auramorph</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2a1b40" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Auramorph logo" class="brand-logo" />
+      <span class="brand-name">Auramorph by Interstellers</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="girls.html" class="nav-link">Girls Products</a>
+      <a href="boys.html" class="nav-link">Boys Products</a>
+      <a href="tryon.html" class="nav-link">Virtual Try-On</a>
+      <a href="wishlist.html" class="nav-link">Wishlist</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="cart.html" class="nav-link btn-cart">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Checkout</h1>
+    <div class="checkout-grid">
+      <form id="checkout-form" class="card form">
+        <h3>Shipping Details</h3>
+        <label>Full Name
+          <input type="text" name="fullname" required />
+        </label>
+        <label>Phone
+          <input type="tel" name="phone" required />
+        </label>
+        <label>Address
+          <input type="text" name="address" required />
+        </label>
+        <label>City
+          <input type="text" name="city" required />
+        </label>
+
+        <h3>Payment</h3>
+        <label>Card Number
+          <input type="text" name="cardnumber" placeholder="4111 1111 1111 1111" required />
+        </label>
+        <div class="row">
+          <label>Expiry
+            <input type="text" name="expiry" placeholder="MM/YY" required />
+          </label>
+          <label>CVV
+            <input type="password" name="cvv" placeholder="***" required />
+          </label>
+        </div>
+
+        <button class="btn primary" type="submit">Pay Now</button>
+        <p class="note">This is a demo checkout for your university project.</p>
+      </form>
+
+      <aside class="card">
+        <h3>Order Summary</h3>
+        <div id="checkout-summary">
+          <!-- Items injected via app.js -->
+        </div>
+        <p><strong>Total:</strong> Rs <span id="checkout-total">0</span></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Auramorph by Interstellers. All rights reserved.</p>
+  </footer>
+</body>
+</html>

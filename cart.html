@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart — Auramorph</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Auramorph logo" class="brand-logo" />
+      <span class="brand-name">Auramorph by Interstellers</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="girls.html" class="nav-link">Girls Products</a>
+      <a href="boys.html" class="nav-link">Boys Products</a>
+      <a href="tryon.html" class="nav-link">Virtual Try-On</a>
+      <a href="wishlist.html" class="nav-link">Wishlist</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="return.html" class="nav-link ">Return</a>
+      <a href="cart.html" class="nav-link btn-cart active">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Your Cart</h1>
+    <div id="cart-list" class="cart-list">
+      <!-- Products will be injected here via app.js -->
+    </div>
+
+    <section class="cart-summary">
+      <h2>Order Summary</h2>
+      <p><strong>Subtotal:</strong> Rs <span id="cart-subtotal">0</span></p>
+      <p><strong>Estimated Shipping:</strong> Rs <span id="cart-shipping">199</span></p>
+      <p><strong>Total:</strong> Rs <span id="cart-total">0</span></p>
+      <div class="cart-actions">
+        <a class="btn outline" href="shop.html">Continue Shopping</a>
+        <a class="btn primary" href="checkout.html">Proceed to Checkout</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Auramorph by Interstellers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
