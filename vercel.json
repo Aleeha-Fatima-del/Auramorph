@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/Boys", "destination": "/Boys.html" },
+    { "source": "/Girls", "destination": "/Girls.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/cart", "destination": "/cart.html" },
+    { "source": "/checkout", "destination": "/checkout.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/return", "destination": "/return.html" },
+    { "source": "/signup", "destination": "/signup.html" },
+    { "source": "/tryon", "destination": "/tryon.html" },
+    { "source": "/wishlist", "destination": "/wishlist.html" }
+  ]
+}
