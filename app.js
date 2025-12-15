@@ -1,4 +1,4 @@
- HEAD
+ 
 // app.js
 
 // --- Brand text in one place ---
